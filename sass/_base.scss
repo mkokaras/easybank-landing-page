@@ -1,0 +1,260 @@
+$fs-heading-1: 4rem;
+
+$fs-heading-2: 3.2rem;
+
+$fs-heading-3: 2rem;
+
+$fs-body-lg: 1.5rem;
+
+$fs-body-md: 1.5rem;
+
+$fs-body-sm: 1.3rem;
+
+$fs-body-xsm: 1rem;
+
+$fs-nav-lg: 1.8rem;
+
+$fs-nav-md: 1.5rem;
+
+$fs-link: 1.6rem;
+
+$fs-button: 1.4rem;
+
+$bg-gradient: linear-gradient(135deg, #33d35e 0%, #2ab6d9 100%);
+
+$clr-primary: #30c88f;
+
+$clr-secondary-dark: #2d314d;
+
+$clr-secondary-light: #f4f5f7;
+
+$clr-grey-dark: #2d314d;
+
+$clr-grey-light-1: #9597a5;
+
+$clr-grey-light-2: #fff;
+
+$fw-bold: 700;
+
+$fw-regural: 400;
+
+$fw-light: 300;
+
+$ff-primary: "Public sans", sans-serif;
+
+$bp-desktop: 75em;
+
+.bg-primary {
+  background-color: $clr-primary;
+}
+
+.bg-secondary-dark {
+  background-color: $clr-secondary-dark;
+}
+
+.bg-secondary-light {
+  background-color: $clr-secondary-light;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-gradient {
+  background: $bg-gradient;
+}
+
+%heading {
+  color: $clr-grey-dark;
+  font-weight: $fw-light;
+}
+
+%body {
+  color: $clr-grey-light-1;
+  font-weight: $fw-regural;
+}
+
+.heading-1 {
+  @extend %heading;
+  font-size: $fs-heading-1;
+  letter-spacing: -0.714px;
+  line-height: normal;
+
+  @media (min-width: $bp-desktop) {
+    font-size: 5.6rem;
+    letter-spacing: -1px;
+    line-height: 1.14;
+  }
+}
+
+.heading-2 {
+  @extend %heading;
+
+  font-size: $fs-heading-2;
+  letter-spacing: -0.571px;
+  line-height: normal;
+
+  @media (min-width: $bp-desktop) {
+    font-size: 4rem;
+    line-height: 1.6;
+    letter-spacing: -0.714px;
+  }
+}
+
+.heading-3 {
+  @extend %heading;
+
+  font-size: $fs-heading-3;
+  letter-spacing: -0.357px;
+  line-height: 1.4;
+
+  @media (min-width: $bp-desktop) {
+    font-size: 2.4rem;
+    line-height: 1.16;
+    letter-spacing: -0.429px;
+  }
+}
+
+.body-lg {
+  @extend %body;
+
+  font-size: $fs-body-lg;
+  line-height: 1.667;
+
+  letter-spacing: -0.234px;
+
+  @media (min-width: $bp-desktop) {
+    font-size: 1.8rem;
+    line-height: 1.55;
+    letter-spacing: -0.281px;
+  }
+}
+
+.body-md {
+  @extend %body;
+
+  font-size: $fs-body-md;
+  line-height: 1.667;
+
+  letter-spacing: -0.234px;
+
+  @media (min-width: $bp-desktop) {
+    font-size: 1.6rem;
+    line-height: 1.625;
+    letter-spacing: -0.25px;
+  }
+}
+
+.body-sm {
+  @extend %body;
+
+  font-size: $fs-body-sm;
+  line-height: 1.38;
+  letter-spacing: -0.203px;
+}
+
+.body-xsm {
+  @extend %body;
+
+  font-size: $fs-body-xsm;
+  line-height: 1.8;
+  letter-spacing: -0.156px;
+}
+
+.nav-link {
+  &-md {
+    font-size: $fs-nav-md;
+    line-height: 1.734;
+    font-weight: $fw-regural;
+    letter-spacing: -0.234px;
+    transition: 0.3s color;
+
+    &:link,
+    &:visited {
+      color: $clr-grey-light-1;
+    }
+    &:hover,
+    &:active {
+      color: $clr-primary;
+    }
+  }
+
+  &-lg {
+    font-size: $fs-nav-lg;
+    line-height: normal;
+    font-weight: $fw-regural;
+    letter-spacing: -0.138px;
+    transition: 0.3s color;
+
+    @media (min-width: $bp-desktop) {
+      font-size: 1.4rem;
+      line-height: normal;
+      letter-spacing: -0.108px;
+    }
+
+    &:link,
+    &:visited {
+      color: $clr-grey-dark;
+
+      @media (min-width: $bp-desktop) {
+        color: $clr-grey-light-1;
+      }
+    }
+    &:hover,
+    &:active {
+      color: $clr-grey-dark;
+    }
+  }
+}
+
+.link {
+  font-size: $fs-link;
+  line-height: 1.25;
+  font-weight: $fw-regural;
+  letter-spacing: -0.286px;
+  transition: 0.3s color;
+
+  &:link,
+  &:visited {
+    color: $clr-grey-dark;
+  }
+
+  &:hover,
+  &:active {
+    color: $clr-primary;
+  }
+}
+
+.btn {
+  display: inline-block;
+  color: $clr-grey-light-2;
+  font-size: $fs-button;
+  font-weight: $fw-bold;
+  line-height: 2;
+  border-radius: 22px;
+
+  padding: 0.8rem 3.4rem;
+  background: $bg-gradient;
+}
+
+.grid-auto-col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+}
+
+.container {
+  padding: 0 2.4rem;
+  max-width: 110rem;
+  margin: 0 auto;
+}
+
+html {
+  font-size: 62.5%; //10px
+}
+
+body {
+  @extend %body;
+
+  font-family: $ff-primary;
+  font-size: $fs-body-lg;
+}
