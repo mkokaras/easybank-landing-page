@@ -1,0 +1,18 @@
+.header {
+  padding: 2.2rem 0;
+  z-index: 2;
+  position: relative;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-open {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

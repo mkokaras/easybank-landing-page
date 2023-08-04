@@ -1,0 +1,36 @@
+.footer {
+  padding: 4rem 0;
+
+  & > div {
+    display: grid;
+    gap: 3.2rem;
+  }
+
+  &__item {
+    &--1 {
+      display: grid;
+      gap: 3.2rem;
+
+      justify-items: center;
+
+      ul {
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+      }
+    }
+
+    &--2 {
+      ul {
+        display: grid;
+        gap: 0.8rem;
+      }
+    }
+
+    &--3 {
+      display: grid;
+      gap: 2.4rem;
+      justify-items: center;
+    }
+  }
+}
