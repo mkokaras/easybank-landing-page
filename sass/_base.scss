@@ -83,6 +83,7 @@ $bp-tablet: 48em;
 %body {
   color: $clr-grey-light-1;
   font-weight: $fw-regural;
+  text-align: center;
 
   @media (min-width: $bp-desktop) {
     text-align: start;
@@ -251,7 +252,7 @@ $bp-tablet: 48em;
 }
 
 .link {
-  display: inline-block;
+  display: block;
 
   font-size: $fs-link;
   line-height: 1.25;
@@ -259,6 +260,7 @@ $bp-tablet: 48em;
   letter-spacing: -0.286px;
   transition: 0.3s color;
   text-decoration: none;
+  text-align: start;
 
   &:link,
   &:visited {
@@ -314,4 +316,5 @@ body {
 
   font-family: $ff-primary;
   font-size: $fs-body-lg;
+  overflow-x: hidden;
 }

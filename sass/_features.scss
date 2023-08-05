@@ -18,9 +18,8 @@
   &__text {
     margin-bottom: 5.6rem;
 
-    width: 50%;
-
     @media (min-width: $bp-desktop) {
+      width: 50%;
       margin-bottom: 7.2rem;
     }
   }
