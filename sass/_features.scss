@@ -1,14 +1,28 @@
 .section-features {
   padding: 6.4rem 0;
+
+  @media (min-width: $bp-desktop) {
+    padding: 9.6rem 0;
+  }
 }
 
 .features {
   &__title {
     margin-bottom: 1.4rem;
+
+    @media (min-width: $bp-desktop) {
+      margin-bottom: 1.6rem;
+    }
   }
 
   &__text {
     margin-bottom: 5.6rem;
+
+    width: 50%;
+
+    @media (min-width: $bp-desktop) {
+      margin-bottom: 7.2rem;
+    }
   }
 
   &__list {
@@ -20,11 +34,23 @@
   display: grid;
   justify-items: center;
 
+  @media (min-width: $bp-desktop) {
+    justify-items: start;
+  }
+
   img {
     margin-bottom: 2.4rem;
+
+    @media (min-width: $bp-desktop) {
+      margin-bottom: 4rem;
+    }
   }
 
   h3 {
     margin-bottom: 1.6rem;
+
+    @media (min-width: $bp-desktop) {
+      margin-bottom: 2.6rem;
+    }
   }
 }

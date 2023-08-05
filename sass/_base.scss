@@ -44,6 +44,8 @@ $ff-primary: "Public sans", sans-serif;
 
 $bp-desktop: 75em;
 
+$bp-tablet: 48em;
+
 .bg-primary {
   background-color: $clr-primary;
 }
@@ -72,12 +74,19 @@ $bp-desktop: 75em;
   color: $clr-grey-dark;
   font-weight: $fw-light;
   text-align: center;
+
+  @media (min-width: $bp-desktop) {
+    text-align: start;
+  }
 }
 
 %body {
   color: $clr-grey-light-1;
   font-weight: $fw-regural;
-  text-align: center;
+
+  @media (min-width: $bp-desktop) {
+    text-align: start;
+  }
 }
 
 .heading-1 {
@@ -167,6 +176,26 @@ $bp-desktop: 75em;
   letter-spacing: -0.156px;
 }
 
+.icon-link {
+  display: flex;
+  text-decoration: none;
+  transition: 0.3s color;
+  font-size: $fs-nav-md;
+  line-height: 1.734;
+  font-weight: $fw-regural;
+  letter-spacing: -0.234px;
+  transition: 0.3s color;
+
+  &:link,
+  &:visited {
+    color: $clr-grey-light-2;
+  }
+  &:hover,
+  &:active {
+    color: $clr-primary;
+  }
+}
+
 .nav-link {
   &-md {
     display: inline-block;
@@ -191,7 +220,7 @@ $bp-desktop: 75em;
   &-lg {
     display: inline-block;
     text-decoration: none;
-    transition: 0.3s color;
+    transition: 0.2s all;
     font-size: $fs-nav-lg;
     line-height: normal;
     font-weight: $fw-regural;
@@ -207,13 +236,16 @@ $bp-desktop: 75em;
     &:visited {
       color: $clr-grey-dark;
 
-      @media (min-width: $bp-desktop) {
+      @media (min-width: $bp-tablet) {
         color: $clr-grey-light-1;
       }
     }
     &:hover,
     &:active {
       color: $clr-grey-dark;
+      border-bottom: 4px solid;
+      border-image: $bg-gradient 1;
+      border-image-outset: 2.8rem 0;
     }
   }
 }
@@ -246,11 +278,15 @@ $bp-desktop: 75em;
   font-weight: $fw-bold;
   line-height: 2;
   border-radius: 22px;
+  cursor: pointer;
+
+  transition: opacity 0.4s;
 
   padding: 0.8rem 3.4rem;
   background: $bg-gradient;
 
   &:hover {
+    opacity: 0.4;
   }
 }
 
@@ -261,8 +297,12 @@ $bp-desktop: 75em;
 
 .container {
   padding: 0 2.4rem;
-  max-width: 110rem;
+  max-width: 130rem;
   margin: 0 auto;
+
+  @media (min-width: $bp-tablet) {
+    padding: 0 4.8rem;
+  }
 }
 
 html {
