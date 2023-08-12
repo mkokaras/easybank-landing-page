@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 
 - Solution: [Github](https://github.com/mkokaras/easybank-landing-page)
-- Site: [Github Pages](https://your-live-site-url.com)
+- Site: [Github Pages](https://mkokaras.github.io/easybank-landing-page/)
 
 ## My process
 
